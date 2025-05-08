@@ -1,0 +1,19 @@
+{% include "header.html" %}
+
+<body>
+<main class="container d-flex flex-column align-items-center mt-5">
+  {% if latest_question_list %}
+  <ul>
+    {% for question in latest_question_list %}
+    <li class="mb-2">
+      <a href = "{% url 'polls:detail' question.id %}">
+        <button class="btn btn-outline-primary rounded-0">{{ question.question_text }}</button>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>No polls are available.</p>
+  {% endif %}
+</main>
+</body>

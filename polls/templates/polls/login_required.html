@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column align-items-center justify-content-center vh-100">
+    <h1 class="mb-4">Login to Vote</h1>
+    <div>
+      <a href = "{% url 'register:register' %}">
+      <button class="btn btn-outline-warning rounded-0 me-3">Register New User</button>      
+      </a>
+      <a href = "{% url 'user_auth:login' %}">
+        <button class="btn btn-outline-primary rounded-0">Login</button>
+      </a>
+    </div>
+  </body>
+</html>
+
+
