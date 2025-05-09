@@ -13,7 +13,7 @@ def register(request):
       user = form.save()
       login(request, form.save())
 
-      return redirect('../')
+      return redirect('../polls/')
   else:
     form = RegisterForm()
 
